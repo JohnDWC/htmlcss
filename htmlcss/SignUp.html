@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="SignUp.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="SignUp.js"></script>
+  </head>
+  <body>
+    <div class="signup-box">
+      <h1>SignUp</h1>
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="" />
+        <label>Password</label>
+        <input type="password" placeholder="" /><hr>
+        <input type="button" value="Submit"/>
+      </form>
+        <p><input type="code" placeholder="input your verification code"/>
+        <input type="button"  value="Send verification code to your email"/></p>
+    </div>
+
+    <div>
+      <p>Please make sure you have read and agree all the <a href="clause.html">terms and conditions</a></p>
+      <p>I have read and agree
+      <input type="checkbox" name="agree" id="agree" onclick="a()"/>
+      <button type="button" id="btn" onclick="a()" disabled="">SignUp</button></p>
+    </div>
+
+    <p class="para-2">
+      Already have an account? <a href="Login.html">Login Here</a>
+    </p>
+  </body>
+</html>

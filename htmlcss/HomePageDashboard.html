@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SideBar Menu</title>
+	<link rel="stylesheet" href="HomePage.css">
+	<script src="https://kit.fontawesome.com/326465d3d1.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger .hamburger__inner").click(function(){
+			  $(".wrapper").toggleClass("active")
+			})
+
+			$(".top_navbar .fas").click(function(){
+			   $(".profile_dd").toggleClass("active");
+			});
+		})
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="hamburger__inner">
+         <div class="one"></div>
+         <div class="two"></div>
+         <div class="three"></div>
+       </div>
+    </div>
+    <div class="menu">
+      <div class="logo">
+        Coding Market
+      </div>
+      <div class="right_menu">
+        <ul>
+          <li><i class="fas fa-user"></i>
+            <div class="profile_dd">
+              <div class="dd_item" onclick="window.open('ProfileDetails.html')">Profile</div>
+              <!-- <div class="dd_item">Change Password</div> -->
+              <div class="dd_item" onclick="window.open('HomePageSettings.html')">Settings</div>
+              <div class="dd_item" onclick="window.open('Login.html')">Logout</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="main_container">
+      <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile">
+            <!--   <div class="img">
+                <img src="https://i.imgur.com/Ctwf8HA.png" alt="profile_pic">
+              </div> -->
+              <div class="profile_info">
+                 <p>Welcome</p>
+                 <p class="profile_name">Manraj Singh</p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#" class="active">
+                  <span class="icon"><i class="fas fa-dice-d6"></i></span>
+                  <span class="title">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fab fa-delicious"></i></span>
+                  <span class="title">Callender</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#">
+                  <span class="icon"><i class="fa-solid fa-gears"></i></span>
+                  <span class="title">Settings</span>
+                </a>
+              </li> -->
+              
+            </ul>
+          </div>
+      </div>
+       
+      <div class="container">
+        <h1>Upcoming Events</h1>
+        <div class="item">
+          <h2>House Party</h2>
+          <p><b>Date:</b> 29/08/2022</p>
+          <p><b>Description:</b>Party at Dans house, free red bulls and pizzas!!</p>
+          <p><b>Loaction:</b>Port Adelaide</p>
+        </div>
+        <div class="item">
+          <h2>Wish happy Birtday</h2>
+          <p><b>Date:</b> 06/07/2022</p>
+          <p><b>Description:</b>Wish Mj Happy Birtday!!</p>
+        </div>
+      </div>
+  </div>
+  
+</div>	
+
+</body>
+</html>

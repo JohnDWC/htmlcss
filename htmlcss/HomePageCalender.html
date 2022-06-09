@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SideBar Menu</title>
+	<link rel="stylesheet" href="HomePage.css">
+  <script src="https://kit.fontawesome.com/326465d3d1.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger .hamburger__inner").click(function(){
+			  $(".wrapper").toggleClass("active")
+			})
+
+			$(".top_navbar .fas").click(function(){
+			   $(".profile_dd").toggleClass("active");
+			});
+		})
+	</script>
+
+  <link rel="stylesheet" href="HomePageCalender.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    
+  
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="hamburger__inner">
+         <div class="one"></div>
+         <div class="two"></div>
+         <div class="three"></div>
+       </div>
+    </div>
+    <div class="menu">
+      <div class="logo">
+        Calender
+      </div>
+      <div class="right_menu">
+        <ul>
+          <li><i class="fas fa-user"></i>
+            <div class="profile_dd">
+              <div class="dd_item" onclick="window.open('ProfileDetails.html')">Profile</div>
+              <!-- <div class="dd_item">Change Password</div> -->
+              <div class="dd_item" onclick="window.open('HomePageSettings.html')">Settings</div>
+              <div class="dd_item" onclick="window.open('Login.html')">Logout</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="main_container">
+      <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile">
+            <!--   <div class="img">
+                <img src="https://i.imgur.com/Ctwf8HA.png" alt="profile_pic">
+              </div> -->
+              <div class="profile_info">
+                 <p>Welcome</p>
+                 <p class="profile_name">Manraj Singh</p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#" class="active">
+                  <span class="icon"><i class="fas fa-dice-d6"></i></span>
+                  <span class="title">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fab fa-delicious"></i></span>
+                  <span class="title">Callender</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#">
+                  <span class="icon"><i class="fa-solid fa-gears"></i></span>
+                  <span class="title">Settings</span>
+                </a>
+              </li> -->
+              
+            </ul>
+          </div>
+      </div>
+      <!-- ALL the data will reside inside this -->
+      <div class="container">
+        <div class="calendar">
+        <div class="month">
+          <i class="fas fa-angle-left prev"></i>
+          <div class="date">
+            <h1></h1>
+            <p></p>
+          </div>
+          <i class="fas fa-angle-right next"></i>
+        </div>
+        <div class="weekdays">
+          <div>Sun</div>
+          <div>Mon</div>
+          <div>Tue</div>
+          <div>Wed</div>
+          <div>Thu</div>
+          <div>Fri</div>
+          <div>Sat</div>
+        </div>
+        <div class="days"></div>
+        <div class="event">
+           
+            <form>
+                <label for="fname">Event name</label><br>
+                <input type="text" id="EventName"><br>
+                
+                <label for="fname">Start</label><br>
+                <input type="date" id="StartDate" min="2022-01-01" max="2023-12-30"><br>
+                <label for="fname">End</label><br>
+                <input type="date" id="EndDate" min="2022-01-01" max="2023-12-30"><br>
+
+                <label for="fname">Event Description</label><br>
+                <input type="text" id="EvenDescription"><br>
+                <br>
+                <label for="fname">Select color theme!</label><br>
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> Red</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> Blue</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> Green</label><br><br>
+
+                <button>Submit</button>
+                
+            </form>
+        </div>
+        
+      </div>
+        
+      </div>
+  </div>
+  
+</div>	
+<script src="HomePage.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>SideBar Menu</title>
+	<link rel="stylesheet" href="HomePage.css">
+	<script src="https://kit.fontawesome.com/326465d3d1.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+	<script>
+		$(document).ready(function(){
+			$(".hamburger .hamburger__inner").click(function(){
+			  $(".wrapper").toggleClass("active")
+			})
+
+			$(".top_navbar .fas").click(function(){
+			   $(".profile_dd").toggleClass("active");
+			});
+		})
+	</script>
+</head>
+<body>
+
+<div class="wrapper">
+  <div class="top_navbar">
+    <div class="hamburger">
+       <div class="hamburger__inner">
+         <div class="one"></div>
+         <div class="two"></div>
+         <div class="three"></div>
+       </div>
+    </div>
+    <div class="menu">
+      <div class="logo">
+        Coding Market
+      </div>
+      <div class="right_menu">
+        <ul>
+          <li><i class="fas fa-user"></i>
+            <div class="profile_dd">
+              <div class="dd_item" onclick="window.open('ProfileDetails.html')">Profile</div>
+              <!-- <div class="dd_item">Change Password</div> -->
+              <div class="dd_item" onclick="window.open('HomePageSettings.html')">Settings</div>
+              <div class="dd_item" onclick="window.open('Login.html')">Logout</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+    
+  <div class="main_container">
+      <div class="sidebar">
+          <div class="sidebar__inner">
+            <div class="profile">
+            <!--   <div class="img">
+                <img src="https://i.imgur.com/Ctwf8HA.png" alt="profile_pic">
+              </div> -->
+              <div class="profile_info">
+                 <p>Welcome</p>
+                 <p class="profile_name">Manraj Singh</p>
+              </div>
+            </div>
+            <ul>
+              <li>
+                <a href="#" class="active">
+                  <span class="icon"><i class="fas fa-dice-d6"></i></span>
+                  <span class="title">Dashboard</span>
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <span class="icon"><i class="fab fa-delicious"></i></span>
+                  <span class="title">Callender</span>
+                </a>
+              </li>
+              <!-- <li>
+                <a href="#">
+                  <span class="icon"><i class="fa-solid fa-gears"></i></span>
+                  <span class="title">Settings</span>
+                </a>
+              </li> -->
+              
+            </ul>
+          </div>
+      </div>
+       
+      <div class="container">
+        <h1>Profile Details <i class="fa-solid fa-user"></i></h1>
+        <div class="item">
+          <h2> <b>Name:</b>    <input type="name" placeholder="Manraj"></h2>
+          <h2> <b>Surname:</b> <input type="surname" placeholder="Dua"></h2>
+        </div>
+
+        <div class="contact">
+          <h2> <b>Email:</b>   <input type="email" placeholder="something@gmail.com"></h2>
+          <h2> <b>Phone Num:</b>   <input type="phone" placeholder="0412345678"></h2>
+          <button class="social_media">Link your social media account</button>
+        </div>
+        
+        <div class="address">
+          <h2> <b>Address:</b>   <input type="address" placeholder="1 Grenfell St"></h2>
+          <h2> <b>Postcode:</b>  <input type="postcode" placeholder="5000"></h2>
+          <h2> <b>Surburb:</b>   <input type="surburb" placeholder="ADELAIDE, SA 5000"></h2>
+        </div>
+
+        <div class="job">
+          <h2> <b>Occupation:</b>   <input type="occupation" placeholder="Student"></h2>
+          <h2> <b>Workplace/Company:</b>  <input type="workplace" placeholder="uofa"></h2>
+        </div>
+        <p><button>Update &#10004;</button></p>
+      </div>
+  </div>
+  
+</div>	
+
+</body>
+</html>
